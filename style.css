@@ -1,0 +1,151 @@
+:root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #0f1220;
+  color: #e9ecff;
+}
+
+.card {
+  width: min(560px, calc(100% - 32px));
+  background: #171a2b;
+  border: 1px solid #2a2f4a;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+h1 { margin: 0 0 16px; font-size: 22px; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+input[type="number"], input[readonly], input[type="text"], input[type="password"] {
+  width: 170px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #2a2f4a;
+  background: #101325;
+  color: #e9ecff;
+}
+
+.options {
+  border: 1px solid #2a2f4a;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 10px 0 14px;
+}
+
+.check { display: flex; gap: 10px; align-items: center; margin: 8px 0; }
+
+.actions { display: flex; gap: 10px; }
+
+button {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #2a2f4a;
+  background: #2a66ff;
+  color: white;
+  cursor: pointer;
+}
+
+button.secondary { background: transparent; }
+
+button:hover { filter: brightness(1.06); }
+
+.output { margin-top: 14px; }
+
+.output label { display: block; margin-bottom: 6px; }
+
+/* Champ mot de passe + bouton afficher/masquer */
+#password { box-sizing: border-box; }
+
+.pwd-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+
+.pwd-row #password {
+  flex: 1;
+  width: auto;
+  min-width: 0;
+}
+
+/* Force */
+.strength { margin-top: 12px; }
+
+.strength-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  opacity: .9;
+  margin-bottom: 6px;
+}
+
+.strength-bar {
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid #2a2f4a;
+  background: #101325;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  width: 0%;
+  background: #2a66ff;
+  transition: width 150ms ease;
+}
+
+/* Historique */
+.history { margin-top: 18px; }
+
+.history-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.history h2 { margin: 0; font-size: 16px; }
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #2a2f4a;
+  border-radius: 12px;
+  background: #101325;
+}
+
+.history-pwd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.history-actions { display: flex; gap: 8px; }
+
+.history-actions button { padding: 8px 10px; }
